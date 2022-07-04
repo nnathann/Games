@@ -1,9 +1,19 @@
-HIDDEN_BOARD = [[' '] * 5 for x in range(5)]
+class OutputGrid:
 
-print(HIDDEN_BOARD)
-
-let_to_num = {"A" :0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6,  "H": 7}
-
-def print_grid(grid):
-  print("   A B C D E F G H")
-  print("   ---------------")
+  columnmap = {
+    "0": "A",
+    "1": "B",
+    "2": "C",
+    "3": "D",
+    "4": "E"
+  }
+  column = 0
+  row = 0
+  while column < 5:
+    row = 0
+    while row < 5:
+      dictkey = columnmap[str(column)] + str(row+1)
+      print(grid[dictkey], end=" ")
+      row += 1
+    print("")
+    column += 1
