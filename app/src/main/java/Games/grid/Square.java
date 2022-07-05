@@ -1,13 +1,13 @@
-package Games;
+package Games.grid;
 
 public class Square {
-    private final int x;
-    private final int y;
+    private final int column;
+    private final int row;
 
 
-    public Square(int i, int j) {
-        this.x = i;
-        this.y = j;
+    public Square(int column, int row) {
+        this.column = column;
+        this.row = row;
     }
 
     private enum SquareStatus {
@@ -27,7 +27,7 @@ public class Square {
         }
 
         public String getCharacter() {
-            return squareCharatcter;
+            return this.squareCharatcter;
         }
     }
 }

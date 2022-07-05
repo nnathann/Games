@@ -1,13 +1,15 @@
-package Games;
+package Games.grid;
+
+import Games.ship.Ship;
 
 public class Grid {
     private final int GRIDSIZE = 5;
     private char[][] grid = new char[GRIDSIZE][GRIDSIZE];
 
     public Grid(){
-        for (int i = 0; i < GRIDSIZE ; i++){
-            for (int j = 0; j < GRIDSIZE; j++){
-                grid[i][j] = 'o';
+        for (int column = 0; column < GRIDSIZE; column++){
+            for (int row = 0; row < GRIDSIZE; row++){
+                grid[column][row] = 'o';
             }
         }
     }
@@ -15,13 +17,22 @@ public class Grid {
     public void printGrid(){
         System.out.println("  ABCDE");
         System.out.println("  -----");
-        for(int i = 0; i < GRIDSIZE ; i++){
-            System.out.print(i+1);
+        for(int column = 0; column < GRIDSIZE; column++){
+            System.out.print(column+1);
             System.out.print("|");
-            for(int j = 0; j < GRIDSIZE ; j++){
-                System.out.print(grid[i][j]);
+            for(int row = 0; row < GRIDSIZE; row++){
+                System.out.print(grid[column][row]);
             }
             System.out.println("");
         }
     }
+
+    public void placeShip(Ship ship){
+        int populate = ship.getEndCol() - ship.getStartCol();
+        for (int i = 0; i <= populate ; i++){
+            grid[ship.getStartCol()][ship.getStartRow() + i] = 'S';
+        }
+
+    }
+
 }
