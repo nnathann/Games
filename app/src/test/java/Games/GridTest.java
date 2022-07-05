@@ -58,7 +58,4 @@ public class GridTest {
  SHIP
 SHIP column = A1
 SHIP row = C1
-
-
-
 */

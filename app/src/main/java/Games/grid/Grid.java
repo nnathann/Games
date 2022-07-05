@@ -28,6 +28,10 @@ public class Grid {
     }
 
     public void placeShip(Ship ship){
+        int populate = ship.getEndCol() - ship.getStartCol();
+        for (int i = 0; i <= populate ; i++){
+            grid[ship.getStartCol()][ship.getStartRow() + i] = 'S';
+        }
 
     }
 

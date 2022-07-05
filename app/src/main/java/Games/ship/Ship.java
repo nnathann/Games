@@ -18,16 +18,22 @@ public class Ship {
         String[] str3 = secondCoordinate.split("");
         String secondColumn = str3[0];
         String secondRow = str3[1];
-        this.startRow = Integer.parseInt(firstRow);
-        this.endRow = Integer.parseInt(secondRow);
+        this.startRow = Integer.parseInt(firstRow) -1;
+        this.endRow = Integer.parseInt(secondRow) -1;
         this.startCol = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(firstColumn);
         this.endCol = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(secondColumn);
     }
+
+    public int getStartCol(){
+        return this.startCol;
+    }
+    public int getEndCol(){
+        return this.endCol;
+    }
+    public int getStartRow(){
+        return this.startRow;
+    }
+    public int getEndRow(){
+        return this.endRow;
+    }
 }
-/*
-
-
-
-
-
- */
