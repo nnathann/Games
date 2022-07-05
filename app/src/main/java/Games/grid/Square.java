@@ -1,4 +1,4 @@
-package grid;
+package Games;
 
 public class Square {
     private final int x;

@@ -1,5 +1,4 @@
-import grid.*;
-import grid.Grid;
+package Games;
 
 public class Battleship {
     public static void main(String[] args) {
